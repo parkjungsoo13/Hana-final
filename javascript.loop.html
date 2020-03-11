@@ -1,0 +1,41 @@
+<html>
+    <head>
+        <title>Loop</title>
+        <meta charset="utf-8">
+    </head>
+
+    <body>
+        <h1>Loop</h1>
+        <ol>    <!-- OL생성 -->
+            <script>    
+                var i = 0;
+                while(i < 5)    // i < 5 까지 반복
+                {
+                    document.write('<li>List' + (i+1) + '</li>');
+                    i++;
+                }
+            </script>
+        </ol>   <!-- 결과적으로 OL을 i개만큼 찍어서 생성하기 -->
+
+        <h2>Array</h2>
+
+        <script>
+            var member = ['Babarian', 'Necromancer', 'Amazon'];             // 열 선언
+            document.write(member[0]);                                      // 열 0번 출력
+            member.push('Sorceress', 'Paladin', 'Druid', 'Diablo', 'Baal'); // 열 추가
+        </script>
+
+        <h2>Loop + Array</h2>
+        <ol>        <!-- OL생성 -->
+            <script>
+                var i = 0;        
+                while(i < member.length)    // i < member 열 길이(갯수) 까지 반복
+                {
+                    document.write('<li>' + member[i] + '</li>');   // member[i] 출력
+                    i++;
+                }
+            </script>
+        </ol>   <!-- 결과적으로 OL을 member 수 만큼 출력 + 생성 -->
+
+    </body>
+</html>

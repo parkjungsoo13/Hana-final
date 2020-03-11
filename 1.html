@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>WEB - html</title>
+        <meta charset="utf-8">
+        <script src = "https://cdnjs.cloudflare.com/ajax/libs/js-sha256/0.9.0/sha256.js"></script>
+
+        <script>
+            function login()     // login 함수 정의
+            {
+                var id = 'da3b77510d4898925f6145ee4ff5ed4e7799cafd4950a9dcafca16522991eea6';  // parkjungsoo sha256
+                var pw = '0ffe1abd1a08215353c233d6e009613e95eec4253832a761af28ff37ac5a150c';        // 1111 sha256
+                var input_username = sha256(prompt('Username?'));
+                var input_pw = sha256(prompt('Password?'));
+                if(input_username === id){
+                    if(input_pw === pw){
+                        alert('Login!')
+                    } else {
+                    alert('Your ID or PW incorrect!')
+                    }
+                } else {
+                    alert('Your ID or PW incorrect!')
+                }
+            }                   // login 함수 정의 끝
+        </script>
+    </head>
+
+    <body>
+        <header>
+            <input type="button" value="Login" onclick="
+                login() // <head> 내 login 함수 참조
+            ">
+
+            <h1><a href="index.html">WEB</a></h1>
+
+            <script>
+                var bodyTag = document.querySelector('body');   // body 전체 선택
+                var links = document.querySelectorAll('a');     // a 선택 ex) <h1><a href="index.html">WEB</a></h1>
+            </script>
+
+            <input type="button" value="Night Mode" onclick="   // Night 버튼
+                bodyTag.style.backgroundColor='gray';
+                bodyTag.style.color='white';
+            ">
+
+            <input type="button" value="Day Mode" onclick="     // Day 버튼
+                bodyTag.style.backgroundColor='white';
+                bodyTag.style.color='black';    
+            ">
+            
+            <input type="button" value="Toggle - Night Mode" onclick="  // Night & day toggle 버튼
+            if(this.value === 'Toggle - Night Mode'){
+                console.log(this.value);
+                bodyTag.style.backgroundColor='white';
+                bodyTag.style.color='black';
+                this.value = 'Toggle - Day Mode';
+
+                var i = 0;
+                while(i < links.length)
+                {
+                    links[i].style.color = 'blue';
+                    i++;
+                }
+            } else {
+                bodyTag.style.backgroundColor='gray';
+                bodyTag.style.color='white';
+                this.value = 'Toggle - Night Mode'
+
+                var i = 0;
+                while(i < links.length)
+                {
+                    links[i].style.color = 'white';
+                    i++;
+                }
+            }">     <!--toggle 버튼 종료-->
+        </header>
+
+        <nav>
+            <h2>MENU</h2>
+            <ol>
+                <li><a href="1.html">HTML</a></li>
+                <li><a href="2.html">CSS</a></li>
+                <li><a href="3.html">JavaScript</a></li>
+            </ol>
+        </nav>
+
+        <aritcle>
+            <h2>HTML</h2>
+            Html is ...
+        </aritcle>
+    </body>
+</html>

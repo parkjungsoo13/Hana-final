@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>WEB - CSS</title>
+        <meta charset="utf-8">
+        <style>     /* 모든 h1에 적용시키기 */
+            h1
+            {
+                font-size:35px; 
+            }
+        </style>
+    </head>
+
+    <body>
+        <header>
+            <h1><a href=index.html>WEB</a></h1>
+        </header>
+
+        <nav>
+            <ol>
+                <li><a href="1.html">HTML</a></li>
+                <li><a href="2.html">CSS</a></li>
+                <li><a href="3.html">JavaScript</a></li>
+            </ol>
+        </nav>
+
+        <article>
+            <!--
+                Clear 1. 버튼을 어디다가 두지?
+                Clear 2. 버튼을 어떻게 만들지?
+                3. 버튼을 클릭했을 때 js가 실행되게 어떻게 하지?
+                4. body tag 를 어떻게 js로 선택하지?
+                5. 선택한 body tag에 style을 어떻게 바꾸지?
+                6. background-color, color를 어떻게 넣지?
+            -->
+            <script>
+                var bodyTag = document.querySelector('body');
+            </script>
+
+            <input type="button" value="Night" onclick="
+                bodyTag.style.backgroundColor='gray';
+                bodyTag.style.color='white';
+            ">
+
+            <input type="button" value="Day" onclick="
+                bodyTag.style.backgroundColor='white';
+                bodyTag.style.color='black';
+            ">
+
+            <input type="button" value="Night" onclick="
+                alert('지금부터 색상을 변경하겠습니다.');
+                if(this.value === 'Night')
+                {
+                    bodyTag.style.backgroundColor='gray';
+                    bodyTag.style.color='white';
+                    value = 'Day';
+                } else {
+                    bodyTag.style.backgroundColor='white';
+                    bodyTag.style.color='black';
+                    value = 'Night';
+                }
+                alert_E = alert('색상 변경이 완료되었습니다.');
+            ">
+
+
+            <h2>CSS</h2>
+
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dicta ipsam ducimus ullam id, perferendis distinctio sed ipsum recusandae odit molestias deserunt nobis reprehenderit odio eius rerum. Consequuntur fuga nam velit.
+        </article>
+    </body>
+</html>
