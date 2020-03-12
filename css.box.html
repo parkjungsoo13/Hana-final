@@ -1,0 +1,47 @@
+<html>
+    <head>
+        <title>CSS - Box</title>
+        <meta charset="utf-8">
+        <link href="https://fonts.googleapis.com/css?family=Dancing+Script:400,600&display=swap" rel="stylesheet">
+        <script>
+            function randomGeneratorForArray(length)
+            {
+                return Math.floor(Math.random() * length);
+            }
+            var rdTag = Math.floor(Math.random() * length);   // 0 - 3 random 값 생성 
+        </script>
+        <h1><a href="index_study.html">WEB(inClass) - go back</a></h1>
+    </head>
+    <body onclick="
+        var colors = ['gray', 'powderblue', 'green', 'tomato'];
+        this.style.backgroundColor= colors[randomGeneratorForArray(colors.length)];
+        // this.style.backgroundColor= colors[rdTag];
+        this.style.color= colors[rdTag];
+    ">
+        <style>
+            * {
+                 border: 3px solid red;
+                 font-family: 'Dancing Script', cursive;
+            }
+            h1
+            {
+                border: 3px solid red;
+                padding: 5px;
+                margin: 5px;
+            }
+            img
+            {
+                padding: 5px;
+            }
+            a
+            {
+                display: block;
+            }
+        </style>
+
+        <h1>BOX</h1>
+        <h1>BOX</h1>
+        Lorem <a href="http://w3c.org">ipsum</a> dolor sit, amet consectetur adipisicing elit. Molestias laudantium eos aliquid quas cupiditate perspiciatis commodi. Nesciunt, officia ut facere dolorem incidunt id ad illum enim commodi, repudiandae aliquid praesentium.
+        <img width="100" src="https://source.unsplash.com/random">
+    </body>
+</html>
